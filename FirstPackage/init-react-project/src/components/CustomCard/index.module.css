@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+.main{
+  text-align: center;
+  padding: 2%;
+  width: 300px;
+}
+.h3 {
+  color: #93b111;
+  display: flex;
+}
+
+.h3::before, .h3::after {
+ 
+  border-bottom: 1px solid #93b111;
+  content: "";
+  flex: 1;
+  margin: auto 8px;
+}
+
+.img {
+  width: 100%;
+}
