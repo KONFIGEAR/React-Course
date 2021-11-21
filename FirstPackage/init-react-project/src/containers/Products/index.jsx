@@ -11,8 +11,8 @@ const index = () => {
           //   imgUrl={item.imgUrl}
           //   price={item.price}
           //   description={item.description}
-          {...item}
-        />
+        {...item}/>
+         
       ))}
     </section>
   );
