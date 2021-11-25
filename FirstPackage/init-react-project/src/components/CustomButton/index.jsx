@@ -1,5 +1,10 @@
+const index = ({ type, className, onClick, children }) => (
+  <button type={type} className={className} onClick={onClick}>
+    {children}
+  </button>
+);
 
-import './index.css'
-const index =()=><button id="buy-button" >voir ce produit</button>
-
+index.defaultProps = {
+  type: "submit",
+};
 export default index;
