@@ -1,0 +1,24 @@
+.inputHolder {
+    position: relative;
+    margin: 0 0 20px;
+  }
+   
+.submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  color: #ccc;
+  transition: 0.3s;
+}
+.submit:hover {
+  color: #AAD661;
+  border-color: #AAD661;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto 0;
+}

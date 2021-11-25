@@ -5,14 +5,16 @@ const index = () => {
   return (
     <section className={styles.section}>
       {products.map((item) => (
+
         <CustomCard
-          //   topTitle={item.topTitle}
-          //   title={item.title}
-          //   imgUrl={item.imgUrl}
-          //   price={item.price}
-          //   description={item.description}
-        {...item}/>
-         
+          // topTitle={item.topTitle}
+          // title={item.title}
+          // imgUrl={item.imgUrl}
+          // price={item.price}
+          // description={item.description}
+          {...item}
+        />
+
       ))}
     </section>
   );
