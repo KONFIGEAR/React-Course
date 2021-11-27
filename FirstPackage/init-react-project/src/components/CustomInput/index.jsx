@@ -1,6 +1,14 @@
 import style from "./style.module.css";
 
-const index = ({ isTextArea, id, type, placeholder, required, onChange }) => {
+const index = ({
+  isTextArea,
+  id,
+  type,
+  placeholder,
+  required,
+  onChange,
+  ...rest
+}) => {
   return (
     <div className={style.inputHolder}>
       {!isTextArea ? (
@@ -10,6 +18,7 @@ const index = ({ isTextArea, id, type, placeholder, required, onChange }) => {
           placeholder={placeholder}
           required={required}
           onChange={onChange}
+          {...rest}
         />
       ) : (
         <textarea
@@ -18,6 +27,7 @@ const index = ({ isTextArea, id, type, placeholder, required, onChange }) => {
           placeholder={placeholder}
           required={required}
           onChange={onChange}
+          {...rest}
         />
       )}
     </div>

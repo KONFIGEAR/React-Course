@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Input from "../../components/CustomInput";
 import Button from "../../components/CustomButton";
 import "./index.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from "./actions";
 
 const Form = () => {
   // const [title, setTitle] = useState("");
@@ -12,6 +14,8 @@ const Form = () => {
     price: 0,
     description: "",
   });
+
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     switch (e.target.id) {
@@ -38,18 +42,34 @@ const Form = () => {
   const handleClick = (e) => {
     e.preventDefault();
     const data = { ...product };
-    console.log("testttt", data);
+    dispatch(addProduct(data));
+    setProduct({
+      title: "",
+      price: 0,
+      description: "",
+    });
   };
   return (
     <form className="form">
-      <Input placeholder="title" onChange={handleChange} id="title" error />
+      <Input
+        placeholder="title"
+        onChange={handleChange}
+        id="title"
+        value={product.title}
+      />
       <Input
         placeholder="Price"
         onChange={handleChange}
         id="price"
         type="number"
+        value={product.price}
       />
-      <Input onChange={handleChange} id="description" isTextArea={true} />
+      <Input
+        onChange={handleChange}
+        id="description"
+        isTextArea={true}
+        value={product.description}
+      />
       <Button className="submit" onClick={handleClick}>
         Submit
       </Button>
