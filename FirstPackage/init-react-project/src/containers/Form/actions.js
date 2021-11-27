@@ -7,4 +7,10 @@ const addProduct = (payload) => {
   };
 };
 
-export { addProduct };
+const deleteProduct = (payload) => {
+  return {
+    type: actionTypes.DELETE_PRODUCT,
+    payload,
+  };
+};
+export { addProduct, deleteProduct };

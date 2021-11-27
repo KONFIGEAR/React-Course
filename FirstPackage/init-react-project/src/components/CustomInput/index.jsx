@@ -1,6 +1,6 @@
 import style from "./style.module.css";
 
-const index = ({
+const CustomInput = ({
   isTextArea,
   id,
   type,
@@ -34,11 +34,11 @@ const index = ({
   );
 };
 
-index.defaultProps = {
+CustomInput.defaultProps = {
   type: "text",
   placeholder: "text",
   isTextArea: false,
   required: true,
 };
 
-export default index;
+export default CustomInput;

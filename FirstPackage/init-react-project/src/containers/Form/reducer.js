@@ -9,6 +9,11 @@ const formReducer = (state = initialState, action) => {
         ...state,
         products: [...state.products, action.payload],
       };
+    case actionTypes.DELETE_PRODUCT:
+      return {
+        ...state,
+        products: state.products.filter((item) => item.id !== action.payload),
+      };
     default:
       return state;
   }
