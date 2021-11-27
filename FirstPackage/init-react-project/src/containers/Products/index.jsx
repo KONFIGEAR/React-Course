@@ -1,11 +1,12 @@
+import { useSelector } from "react-redux";
 import CustomCard from "../../components/CustomCard";
 import styles from "./index.module.css";
-import { products } from "../../utils/constants";
-const index = () => {
+
+const Products = () => {
+  const products = useSelector((store) => store.productState.products);
   return (
     <section className={styles.section}>
       {products.map((item) => (
-
         <CustomCard
           // topTitle={item.topTitle}
           // title={item.title}
@@ -14,10 +15,9 @@ const index = () => {
           // description={item.description}
           {...item}
         />
-
       ))}
     </section>
   );
 };
 
-export default index;
+export default Products;
