@@ -1,10 +1,10 @@
-const index = ({ type, className, onClick, children }) => (
+const CustomButton = ({ type, className, onClick, children }) => (
   <button type={type} className={className} onClick={onClick}>
     {children}
   </button>
 );
 
-index.defaultProps = {
+CustomButton.defaultProps = {
   type: "submit",
 };
-export default index;
+export default CustomButton ;

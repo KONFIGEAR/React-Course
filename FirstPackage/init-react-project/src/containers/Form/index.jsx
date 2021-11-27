@@ -4,7 +4,7 @@ import Button from "../../components/CustomButton";
 import "./index.css";
 import { useDispatch } from "react-redux";
 import { addProduct } from "./actions";
-
+import { v4 as uuidv4 } from "uuid";
 const Form = () => {
   // const [title, setTitle] = useState("");
   // const [description, setDescription] = useState("");
@@ -41,7 +41,7 @@ const Form = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    const data = { ...product };
+    const data = { ...product, id: uuidv4() };
     dispatch(addProduct(data));
     setProduct({
       title: "",
