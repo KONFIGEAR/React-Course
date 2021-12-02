@@ -18,7 +18,7 @@ const CustomInput = ({
           placeholder={placeholder}
           required={required}
           onChange={onChange}
-          {...rest}
+          {...rest} 
         />
       ) : (
         <textarea
